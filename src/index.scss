@@ -11,14 +11,14 @@
   --text-color: #fff;
   --text-color-gray: #e2e2e2;
   //font-sizes
-  --font-size-bg: 200px;
-  --font-size-header-large: 50px;
-  --font-size-header: 38px;
-  --font-size-p-large: 30px;
-  --font-size-p-medium: 24px;
-  --font-p-size: 20px;
-  --font-size-p-small: 18px;
-  --font-size-p-x-small: 14px;
+  --font-size-bg: 12.5rem;
+  --font-size-header-large: 3.125rem;
+  --font-size-header: 2.375rem;
+  --font-size-p-large: 1.875rem;
+  --font-size-p-medium: 1.5rem;
+  --font-p-size: 1.25rem;
+  --font-size-p-small: 1.125rem;
+  --font-size-p-x-small: 0.875rem;
   //font-weight
   --font-weight-extra-light: 200;
   --font-weight-light: 300;
@@ -31,13 +31,14 @@
 }
 
 //css reset
-body {
-  font-family: "Poppins", sans-serif;
-  background-color: var(--bg-color);
-  * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  body {
+    font-family: "Poppins", sans-serif;
+    background-color: var(--bg-color-light);
   }
   a {
     text-decoration: none;

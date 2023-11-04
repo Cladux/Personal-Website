@@ -1,0 +1,7 @@
+//sass mixin
+@mixin flex($col: row, $justify: center, $align: center) {
+  display: flex;
+  flex-direction: $col;
+  justify-content: $justify;
+  align-items: $align;
+}

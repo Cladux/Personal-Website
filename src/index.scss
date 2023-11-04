@@ -36,6 +36,10 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  position: relative;
+}
+html {
+  scroll-behavior: smooth;
   body {
     font-family: "Poppins", sans-serif;
     background-color: var(--bg-color-light);

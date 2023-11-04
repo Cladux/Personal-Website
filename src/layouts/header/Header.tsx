@@ -3,8 +3,9 @@ import styles from "./Header.module.scss";
 const Header = () => {
   return (
     <>
-      <header>
-        <section className={styles.titleSection}></section>
+      <header id="Home">
+        <section className={styles.sectionLeft}></section>
+        <section className={styles.sectionRight}></section>
       </header>
     </>
   );

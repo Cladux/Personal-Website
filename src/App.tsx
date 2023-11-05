@@ -3,7 +3,7 @@ import Navbar from "./components/nav/Navbar";
 import AboutMe from "./layouts/aboutMe/AboutMe";
 import Header from "./layouts/header/Header";
 
-const App = () => {
+const App = (): JSX.Element => {
   return (
     <>
       <Navbar />

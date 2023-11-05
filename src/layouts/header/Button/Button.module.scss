@@ -1,0 +1,31 @@
+@import "../../../mixin.scss";
+
+.button {
+  @include flex;
+  gap: 14px;
+  width: 211px;
+  height: 54px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: var(font-p-size);
+  font-weight: var(--font-weight-semi-bold);
+  color: var(--bg-color);
+  background: var(--primary-color);
+  i {
+    color: var(--text-color);
+    svg {
+      fill: var(--bg-color);
+    }
+  }
+}
+.buttonTr {
+  @extend .button;
+  background: transparent;
+  color: var(--text-color);
+  i {
+    svg {
+      fill: var(--text-color);
+    }
+  }
+}

@@ -1,18 +1,5 @@
 type IconsType = {
-  // [key: string]: Icon;
-  cloudDown: () => JSX.Element;
-  circleDown: () => JSX.Element;
-  instagram: () => JSX.Element;
-  github: () => JSX.Element;
-  linkedIn: () => JSX.Element;
-  bxLayout: () => JSX.Element;
-  bxCodeBlock: () => JSX.Element;
-  bxMobile: () => JSX.Element;
-  bxRocket: () => JSX.Element;
-  phone: () => JSX.Element;
-  mail: () => JSX.Element;
-  mailOpen: () => JSX.Element;
-  locationMarker: () => JSX.Element;
+  [key: string]: () => JSX.Element;
 };
 
 const Icons: IconsType = {

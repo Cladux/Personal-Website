@@ -7,7 +7,7 @@ type Props = {
 };
 
 const Button = ({ setIcon, title, bgTransparent }: Props): JSX.Element => {
-  const Icon = Icons[setIcon](); //FIX ME!
+  const Icon = Icons[setIcon]();
   return (
     <>
       <button className={bgTransparent ? styles.buttonTr : styles.button}>

@@ -11,6 +11,10 @@ nav {
     @include flex;
     gap: 4.6875rem;
     color: var(--text-color);
+    & > li {
+      font-size: var(--font-size-p);
+      font-weight: var(--font-weight-medium);
+    }
     .active {
       color: var(--primary-color);
       position: relative;

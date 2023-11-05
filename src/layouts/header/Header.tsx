@@ -1,12 +1,13 @@
 import Button from "./Button/Button.tsx";
 import styles from "./Header.module.scss";
+import IconBox from "./IconBox/IconBox.tsx";
 
 const Header = (): JSX.Element => {
   return (
     <>
       <header id="Home">
         <section className={styles.sectionLeft}>
-          <div className="buttons">
+          <div className={styles.buttons}>
             <Button
               setIcon="cloudDown"
               title="Download CV"
@@ -18,6 +19,11 @@ const Header = (): JSX.Element => {
               bgTransparent={false}
             />
           </div>
+          {/* <div className={styles.iconBoxes}>
+            <IconBox setIcon="instagram" />
+            <IconBox setIcon="git" />
+            <IconBox setIcon="linkedIn" />
+          </div> */}
         </section>
         <section className={styles.sectionRight}></section>
       </header>

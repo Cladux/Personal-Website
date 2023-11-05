@@ -1,0 +1,13 @@
+@import "../../../mixin.scss";
+.iconBox {
+  $size: 50px;
+  @include flex;
+  width: $size;
+  height: $size;
+  border-radius: 50%;
+  background: var(--bg-color-light);
+  background: red;
+  i {
+    fill: var(--text-color);
+  }
+}

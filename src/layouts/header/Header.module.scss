@@ -58,14 +58,14 @@ header {
 }
 
 // media query
-@media only screen and (max-width: 970px) {
+@media only screen and (max-width: 1200px) {
   header {
     @include flex(column);
     // section left
     .sectionLeft {
       flex-basis: 100%;
       clip-path: none;
-      padding: 100px 50px;
+      padding: 120px 50px;
       .container {
         @include flex(column);
         width: 70%;

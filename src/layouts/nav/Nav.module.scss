@@ -2,14 +2,14 @@
 nav {
   @include flex;
   width: 100%;
-  height: 140px;
+  height: 120px;
   position: fixed;
   top: 0;
   z-index: 1;
 
   .navList {
     @include flex;
-    gap: 4.6875rem;
+    gap: 75px;
     color: var(--text-color);
     & > li {
       font-size: var(--font-size-p);
@@ -29,6 +29,15 @@ nav {
         margin-top: -7px;
         background: var(--primary-color);
       }
+    }
+  }
+}
+
+@media only screen and (max-width: 970px) {
+  nav {
+    height: 100px;
+    .navList {
+      gap: 45px;
     }
   }
 }

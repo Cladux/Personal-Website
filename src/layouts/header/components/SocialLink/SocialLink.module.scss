@@ -6,7 +6,10 @@
   height: $size;
   border-radius: 50%;
   background: var(--bg-color-light);
-  svg {
-    fill: var(--text-color);
+  a {
+    @include flex;
+    svg {
+      fill: var(--text-color);
+    }
   }
 }

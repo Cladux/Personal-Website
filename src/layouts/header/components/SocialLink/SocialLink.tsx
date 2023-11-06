@@ -10,7 +10,9 @@ const IconBox = ({ setIcon }: Props): JSX.Element => {
   return (
     <>
       <div className={styles.iconBox}>
-        <Icon />
+        <a href="" target="_blank">
+          <Icon />
+        </a>
       </div>
     </>
   );

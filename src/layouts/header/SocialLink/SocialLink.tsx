@@ -1,4 +1,4 @@
-import styles from "./IconBox.module.scss";
+import styles from "./SocialLink.module.scss";
 import Icons from "../../../icons";
 
 type Props = {
@@ -6,11 +6,11 @@ type Props = {
 };
 
 const IconBox = ({ setIcon }: Props): JSX.Element => {
-  const Icon = Icons[setIcon]();
+  const Icon = Icons[setIcon];
   return (
     <>
       <div className={styles.iconBox}>
-        <i>{Icon}</i>
+        <Icon />
       </div>
     </>
   );

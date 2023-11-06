@@ -6,8 +6,7 @@
   height: $size;
   border-radius: 50%;
   background: var(--bg-color-light);
-  background: red;
-  i {
+  svg {
     fill: var(--text-color);
   }
 }

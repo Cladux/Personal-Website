@@ -13,8 +13,7 @@
   font-weight: var(--font-weight-semi-bold);
   color: var(--bg-color);
   background: var(--primary-color);
-  i {
-    color: var(--text-color);
+  .icon {
     svg {
       fill: var(--bg-color);
     }
@@ -22,9 +21,10 @@
 }
 .buttonTr {
   @extend .button;
+  @include flex(row, flex-start);
   background: transparent;
   color: var(--text-color);
-  i {
+  .icon {
     svg {
       fill: var(--text-color);
     }

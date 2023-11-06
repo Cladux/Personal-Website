@@ -7,11 +7,13 @@ type Props = {
 };
 
 const Button = ({ setIcon, title, bgTransparent }: Props): JSX.Element => {
-  const Icon = Icons[setIcon]();
+  const Icon = Icons[setIcon];
   return (
     <>
       <button className={bgTransparent ? styles.buttonTr : styles.button}>
-        <i>{Icon}</i>
+        <div className={styles.icon}>
+          <Icon />
+        </div>
         <p>{title}</p>
       </button>
     </>

@@ -1,5 +1,4 @@
-@import "../../../mixin.scss";
-
+@import "../../../../mixin.scss";
 .button {
   @include flex;
   gap: 14px;
@@ -28,5 +27,11 @@
     svg {
       fill: var(--text-color);
     }
+  }
+}
+
+@media only screen and (max-width: 970px) {
+  .buttonTr {
+    @include flex(row, center);
   }
 }

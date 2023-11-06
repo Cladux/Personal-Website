@@ -31,6 +31,22 @@
   --font-weight-black: 900;
 }
 
+//media query css variables
+@media only screen and (max-width: 560px) {
+  :root {
+    //media font-sizes
+    --font-size-bg: 200px;
+    --font-size-header-1: 30px;
+    --font-size-header-2: 28px;
+    --font-size-header-3: 38px;
+    --font-size-p-large: 25px;
+    --font-size-p-medium: 20px;
+    --font-size-p: 14px;
+    --font-size-p-small: 14px;
+    --font-size-p-x-small: 12px;
+  }
+}
+
 //css reset
 
 * {

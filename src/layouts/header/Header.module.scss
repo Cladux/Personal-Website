@@ -11,7 +11,7 @@ header {
     background: var(--bg-color);
     .container {
       @include flex(column, center, flex-start);
-      width: 596px;
+      width: 40%;
       height: 100%;
       margin-left: 15%;
       h1 {
@@ -20,7 +20,7 @@ header {
         font-weight: var(--font-weight-extra-bold);
       }
       .line {
-        width: 438px;
+        width: 70%;
         height: 6px;
         background: var(--primary-color);
         align-self: flex-end;
@@ -52,5 +52,28 @@ header {
   .sectionRight {
     flex-basis: 30%;
     height: 100%;
+  }
+}
+
+@media only screen and (max-width: 970px) {
+  header {
+    @include flex(column);
+    .sectionLeft {
+      flex-basis: 100%;
+      clip-path: none;
+      padding: 100px 50px;
+      .container {
+        @include flex(column);
+        width: 70%;
+        margin-left: auto;
+        margin-right: auto;
+        .buttons {
+          @include flex(column);
+        }
+        .line {
+          align-self: center;
+        }
+      }
+    }
   }
 }

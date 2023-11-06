@@ -1,5 +1,5 @@
 import styles from "./Button.module.scss";
-import Icons from "../../../icons";
+import Icons from "../../../../icons";
 type Props = {
   setIcon: keyof typeof Icons;
   title: string;

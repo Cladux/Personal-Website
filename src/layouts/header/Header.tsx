@@ -1,6 +1,6 @@
-import Button from "./Button/Button.tsx";
+import Button from "./components/Button/Button.tsx";
 import styles from "./Header.module.scss";
-import SocialLink from "./SocialLink/SocialLink.tsx";
+import SocialLink from "./components/SocialLink/SocialLink.tsx";
 
 const Header = (): JSX.Element => {
   return (

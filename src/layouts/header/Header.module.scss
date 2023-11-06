@@ -1,9 +1,11 @@
-@import "../../mixin.scss";
+@import "../../scssModules/mixin.scss";
+
 header {
   @include flex(row, space-between);
   width: 100%;
   height: 1080px;
   color: var(--text-color);
+  // left section
   .sectionLeft {
     flex-basis: 70%;
     height: 100%;
@@ -48,16 +50,18 @@ header {
       }
     }
   }
-
+  // right section
   .sectionRight {
     flex-basis: 30%;
     height: 100%;
   }
 }
 
+// media query
 @media only screen and (max-width: 970px) {
   header {
     @include flex(column);
+    // section left
     .sectionLeft {
       flex-basis: 100%;
       clip-path: none;
@@ -75,5 +79,6 @@ header {
         }
       }
     }
+    // section right
   }
 }

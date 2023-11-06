@@ -1,4 +1,4 @@
-@import "../../../../mixin.scss";
+@import "../../../../scssModules/mixin.scss";
 .button {
   @include flex;
   gap: 14px;
@@ -30,8 +30,9 @@
   }
 }
 
+// this is a little position fix in medium size
 @media only screen and (max-width: 970px) {
   .buttonTr {
-    @include flex(row, center);
+    justify-content: center;
   }
 }

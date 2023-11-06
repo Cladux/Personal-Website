@@ -1,4 +1,4 @@
-@import "../../../../mixin.scss";
+@import "../../../../scssModules/mixin.scss";
 .iconBox {
   $size: 50px;
   @include flex;

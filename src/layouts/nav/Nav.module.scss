@@ -31,6 +31,32 @@ nav {
       }
     }
   }
+  .navCircles {
+    @include flex(column);
+    gap: 7px;
+    position: absolute;
+    right: 0;
+    top: 50vh;
+    transform: translateY(-50%);
+    margin: 10px;
+    & > li {
+      @include flex;
+      $size: 15px;
+      width: $size;
+      height: $size;
+      border-radius: 50%;
+      border: 2px solid var(--text-color);
+      a {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .active {
+      background: var(--primary-color);
+      border-color: var(--primary-color);
+      box-shadow: 0 0 20px var(--primary-color);
+    }
+  }
 }
 
 @media only screen and (max-width: 970px) {

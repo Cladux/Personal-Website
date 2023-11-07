@@ -29,15 +29,18 @@ const Header = (): JSX.Element => {
               />
             </div>
             <div className={styles.socialBoxes}>
-              <a href="">
-                <SocialLink setIcon="instagram" />
-              </a>
-              <a href="">
-                <SocialLink setIcon="github" />
-              </a>
-              <a href="">
-                <SocialLink setIcon="linkedIn" />
-              </a>
+              <SocialLink
+                setIcon="instagram"
+                setLink="https://www.instagram.com/cladux_/"
+              />
+              <SocialLink
+                setIcon="github"
+                setLink="https://github.com/Cladux"
+              />
+              <SocialLink
+                setIcon="linkedIn"
+                setLink="https://www.linkedin.com/in/cladux/"
+              />
             </div>
           </div>
         </section>

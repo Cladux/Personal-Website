@@ -26,6 +26,18 @@ const Navbar = (): JSX.Element => {
             </li>
           ))}
         </ul>
+
+        <ul className={styles.navCircles}>
+          {menuItems.map((value: string, index: number) => (
+            <li
+              onClick={() => setActive(index)}
+              className={activeClassHandle(index)}
+              key={index}
+            >
+              <a href={"#" + value}></a>
+            </li>
+          ))}
+        </ul>
       </nav>
     </>
   );

@@ -3,14 +3,15 @@ import Icons from "../../../../icons";
 
 type Props = {
   setIcon: keyof typeof Icons;
+  setLink: string;
 };
 
-const IconBox = ({ setIcon }: Props): JSX.Element => {
+const IconBox = ({ setIcon, setLink }: Props): JSX.Element => {
   const Icon = Icons[setIcon];
   return (
     <>
       <div className={styles.iconBox}>
-        <a href="" target="_blank">
+        <a href={setLink} target="_blank">
           <Icon />
         </a>
       </div>

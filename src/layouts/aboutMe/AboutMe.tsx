@@ -2,7 +2,7 @@ import styles from "./AboutMe.module.scss";
 const AboutMe = (): JSX.Element => {
   return (
     <>
-      <section id="About Me" className={styles.sections}>
+      <section id="About Me" className={styles.aboutMe}>
         asdf
       </section>
     </>

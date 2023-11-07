@@ -41,7 +41,9 @@ const Header = (): JSX.Element => {
             </div>
           </div>
         </section>
-        <section className={styles.sectionRight}></section>
+        <section className={styles.sectionRight}>
+          <div className={styles.circle}></div>
+        </section>
       </header>
     </>
   );

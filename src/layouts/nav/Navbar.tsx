@@ -1,38 +1,30 @@
-import { useEffect, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { updateScrollPosition } from "../../app/features/scrollPositionSlice";
+import { useState, useEffect, useMemo } from "react";
 import styles from "./Nav.module.scss";
 
 const Navbar = (): JSX.Element => {
-  const dispatch = useDispatch();
-  const scrollPosition = useSelector((state) => state.scrollPosition);
   const [active, setActive] = useState<number>(0);
 
   const activeClassHandle = (index: number) => {
     return active === index ? styles.active : "";
   };
 
-  // scroll positions for each section
-  const sectionScrollPositions = [0, 800, 1600, 2400];
+  //set more nav items here
+  const menuItems: string[] = ["Home", "About Me", "Projects", "Contact"];
 
+  //set page Y offset every layouts here
+  const pagePosition: number[] = useMemo(() => [0, 900, 2000], []);
+
+  // useEffect for listen pageYoffset
   useEffect(() => {
     const handleScroll = () => {
-      // Dispatch the action with the current scroll position
       const position = Math.round(window.pageYOffset);
-      dispatch(updateScrollPosition(position));
-
-      // Determine the active section based on the current scroll position
-      //   const activeSection = sectionScrollPositions.findIndex(
-      //     (position, index) => {
-      //       return (
-      //         scrollPosition >= position &&
-      //         (index === sectionScrollPositions.length - 1 ||
-      //           scrollPosition < sectionScrollPositions[index + 1])
-      //       );
-      //     }
-      //   );
-
-      //   activeClassHandle(activeSection);
+      console.log(position);
+      pagePosition.forEach((value, index) => {
+        if (value <= position) {
+          setActive(index);
+          console.log("index:", index);
+        }
+      });
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -41,11 +33,7 @@ const Navbar = (): JSX.Element => {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, [dispatch, scrollPosition]); // Include dispatch and scrollPosition in the dependency array
-
-  // - if you want more page create, just set <section id="NAME"> for that layout
-  // - add here "NAME" just like other names you see here
-  const menuItems = ["Home", "About Me", "Projects", "Contact"];
+  }, [pagePosition, setActive]);
 
   return (
     <>

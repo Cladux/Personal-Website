@@ -22,22 +22,22 @@ const Navbar = (): JSX.Element => {
       dispatch(updateScrollPosition(position));
 
       // Determine the active section based on the current scroll position
-      const activeSection = sectionScrollPositions.findIndex(
-        (position, index) => {
-          return (
-            scrollPosition >= position &&
-            (index === sectionScrollPositions.length - 1 ||
-              scrollPosition < sectionScrollPositions[index + 1])
-          );
-        }
-      );
+      //   const activeSection = sectionScrollPositions.findIndex(
+      //     (position, index) => {
+      //       return (
+      //         scrollPosition >= position &&
+      //         (index === sectionScrollPositions.length - 1 ||
+      //           scrollPosition < sectionScrollPositions[index + 1])
+      //       );
+      //     }
+      //   );
 
-      activeClassHandle(activeSection);
+      //   activeClassHandle(activeSection);
     };
 
     window.addEventListener("scroll", handleScroll);
 
-    // Cleanup function to remove the event listener when the component unmounts
+    // Cleanup function
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };

@@ -1,75 +1,81 @@
 @import "../../scssModules/mixin.scss";
 
 header {
-  @include flex(row, space-between);
   width: 100%;
+  max-width: 1920px;
   height: 1080px;
   color: var(--text-color);
-  position: relative;
+  margin: auto;
   overflow: hidden;
-  // left section
-  .sectionLeft {
-    flex-basis: 70%;
+  .container {
+    @include flex(row, space-between);
     height: 100%;
-    clip-path: polygon(0 0, 56% 0, 100% 100%, 0 100%);
-    background: var(--bg-color);
-    .container {
-      @include flex(column, center, flex-start);
-      width: 40%;
+    width: 100%;
+    position: relative;
+    // left section
+    .sectionLeft {
+      flex-basis: 70%;
       height: 100%;
-      margin-left: 15%;
-      h1 {
-        color: var(--primary-color);
-        font-size: var(--font-size-header-2);
-        font-weight: var(--font-weight-extra-bold);
-      }
-      .line {
-        width: 70%;
-        height: 6px;
-        background: var(--primary-color);
-        align-self: flex-end;
-        margin: 4px 0;
-      }
-      h2 {
-        font-size: var(--font-size-header-1);
-        font-weight: var(--font-weight-bold);
-        margin-bottom: 28px;
-      }
-      & > p {
-        color: var(--text-color-gray);
-        font-size: var(--font-size-p);
-        font-weight: var(--font-weight-medium);
-        margin-bottom: 43px;
-      }
-      .buttons {
-        @include flex;
-        gap: 45px;
-        margin-bottom: 10%;
-      }
-      .socialBoxes {
-        @include flex;
-        gap: 31px;
+      clip-path: polygon(0 0, 56% 0, 100% 100%, 0 100%);
+      background: var(--bg-color);
+      .container {
+        @include flex(column, center, flex-start);
+        width: 40%;
+        height: 100%;
+        margin-left: 15%;
+        h1 {
+          color: var(--primary-color);
+          font-size: var(--font-size-header-2);
+          font-weight: var(--font-weight-extra-bold);
+        }
+        .line {
+          width: 70%;
+          height: 6px;
+          background: var(--primary-color);
+          align-self: flex-end;
+          margin: 4px 0;
+        }
+        h2 {
+          font-size: var(--font-size-header-1);
+          font-weight: var(--font-weight-bold);
+          margin-bottom: 28px;
+        }
+        & > p {
+          color: var(--text-color-gray);
+          font-size: var(--font-size-p);
+          font-weight: var(--font-weight-medium);
+          margin-bottom: 43px;
+        }
+        .buttons {
+          @include flex;
+          gap: 45px;
+          margin-bottom: 10%;
+        }
+        .socialBoxes {
+          @include flex;
+          gap: 31px;
+        }
       }
     }
-  }
-  // right section
-  .sectionRight {
-    flex-basis: 30%;
-    height: 100%;
-    overflow: hidden;
-    .circle {
-      $size: 930px;
-      width: $size;
-      height: $size;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-40%, -40%);
-      z-index: -1;
-      border-radius: 50%;
-      border: 8px solid var(--primary-color);
-      box-shadow: 0 5px 40px var(--primary-color),
-        inset 0 5px 40px var(--primary-color);
+    // right section
+    .sectionRight {
+      flex-basis: 30%;
+      height: 100%;
+      overflow: hidden;
+      .circle {
+        $size: 930px;
+        width: $size;
+        height: $size;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-40%, -40%);
+        z-index: -1;
+        border-radius: 50%;
+        border: 8px solid var(--primary-color);
+        box-shadow: 0 5px 40px var(--primary-color),
+          inset 0 5px 40px var(--primary-color);
+      }
     }
   }
 }
@@ -77,34 +83,36 @@ header {
 // media query md
 @media only screen and (max-width: 1200px) {
   header {
-    @include flex(column, space-between);
     height: 1500px;
-    // section left
-    .sectionLeft {
-      flex-basis: 50%;
-      clip-path: none;
-      padding: 120px 50px;
-      .container {
-        @include flex(column);
-        width: 70%;
-        margin-left: auto;
-        margin-right: auto;
-        .buttons {
+    .container {
+      @include flex(column, space-between);
+      // section left
+      .sectionLeft {
+        flex-basis: 50%;
+        clip-path: none;
+        padding: 120px 50px;
+        .container {
           @include flex(column);
-        }
-        .line {
-          align-self: center;
+          width: 70%;
+          margin-left: auto;
+          margin-right: auto;
+          .buttons {
+            @include flex(column);
+          }
+          .line {
+            align-self: center;
+          }
         }
       }
-    }
-    // section right
-    .sectionRight {
-      flex-basis: 50%;
-      .circle {
-        $size: 700px;
-        width: $size;
-        height: $size;
-        transform: translate(-50%, -30%);
+      // section right
+      .sectionRight {
+        flex-basis: 50%;
+        .circle {
+          $size: 700px;
+          width: $size;
+          height: $size;
+          transform: translate(-50%, -30%);
+        }
       }
     }
   }
@@ -113,12 +121,14 @@ header {
 //media query sm
 @media only screen and (max-width: 768px) {
   header {
-    .sectionRight {
-      .circle {
-        $size: 500px;
-        width: $size;
-        height: $size;
-        transform: translate(-50%, -40%);
+    .container {
+      .sectionRight {
+        .circle {
+          $size: 500px;
+          width: $size;
+          height: $size;
+          transform: translate(-50%, -40%);
+        }
       }
     }
   }

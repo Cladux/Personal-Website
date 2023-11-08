@@ -3,9 +3,14 @@ import styles from "./Nav.module.scss";
 
 const Navbar = (): JSX.Element => {
   const [active, setActive] = useState<number>(0);
+  const [bg, setBg] = useState<boolean>(false);
 
   const activeClassHandle = (index: number) => {
     return active === index ? styles.active : "";
+  };
+
+  const activeBgHandle = () => {
+    return bg ? styles.navBg : "";
   };
 
   //set more nav items here
@@ -18,11 +23,15 @@ const Navbar = (): JSX.Element => {
   useEffect(() => {
     const handleScroll = () => {
       const position = Math.round(window.pageYOffset);
-      console.log(position);
+      console.log(position); // performance must fix better use setTimeOut
+      if (position >= 5) {
+        setBg(true);
+      } else {
+        setBg(false);
+      }
       pagePosition.forEach((value, index) => {
         if (value <= position) {
           setActive(index);
-          console.log("index:", index);
         }
       });
     };
@@ -37,7 +46,7 @@ const Navbar = (): JSX.Element => {
 
   return (
     <>
-      <nav>
+      <nav className={activeBgHandle()}>
         <ul className={styles.navList}>
           {menuItems.map((value: string, index: number) => (
             <li

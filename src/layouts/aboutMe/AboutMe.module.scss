@@ -8,7 +8,6 @@
     height: 745px;
     position: relative;
     overflow: hidden;
-    // background: var(--bg-color);
     .bgText {
       font-size: var(--font-size-bg);
       font-weight: var(--font-weight-bold);
@@ -51,6 +50,16 @@
           }
         }
       }
+    }
+  }
+  .sectionTow {
+    height: 417px;
+    width: 100%;
+    background: var(--bg-color-light);
+    .container {
+      max-width: 800px;
+      margin: auto;
+      text-align: center;
     }
   }
 }

@@ -34,7 +34,11 @@ const AboutMe = (): JSX.Element => {
             </article>
           </div>
         </section>
-        <section className={styles.sectionTow}></section>
+        <section className={styles.sectionTow}>
+          <div className={styles.container}>
+            <h2>My Services</h2>
+          </div>
+        </section>
         <section className={styles.sectionThree}></section>
       </div>
     </>

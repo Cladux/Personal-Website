@@ -23,7 +23,6 @@ const Navbar = (): JSX.Element => {
   useEffect(() => {
     const handleScroll = () => {
       const position = Math.round(window.pageYOffset);
-      console.log(position); // performance must fix better use setTimeOut
       if (position >= 5) {
         setBg(true);
       } else {

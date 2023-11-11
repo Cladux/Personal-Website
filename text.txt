@@ -1,0 +1,4 @@
+- mock data
+- styled component
+- Id Offset
+- swich theme

@@ -17,7 +17,7 @@ const Navbar = (): JSX.Element => {
   const menuItems: string[] = ["Home", "About Me", "Projects", "Contact"];
 
   //set page Y offset every layouts here
-  const pagePosition: number[] = useMemo(() => [0, 900, 2000], []);
+  const PAGE_POSITIONS: number[] = useMemo(() => [0, 900, 2000], []);
 
   // useEffect for listen pageYoffset
   useEffect(() => {
@@ -29,7 +29,7 @@ const Navbar = (): JSX.Element => {
       } else {
         setBg(false);
       }
-      pagePosition.forEach((value, index) => {
+      PAGE_POSITIONS.forEach((value, index) => {
         if (value <= position) {
           setActive(index);
         }
@@ -42,7 +42,7 @@ const Navbar = (): JSX.Element => {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, [pagePosition, setActive]);
+  }, [PAGE_POSITIONS, setActive]);
 
   return (
     <>

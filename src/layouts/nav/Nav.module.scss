@@ -6,7 +6,7 @@ nav {
   height: 90px;
   position: fixed;
   top: 0;
-  z-index: 1;
+  z-index: 99;
 
   .navList {
     @include flex;
@@ -68,7 +68,7 @@ nav {
 }
 .navBg {
   background: var(--bg-color-light);
-  box-shadow: 0 3px 4px rgba($color: #000000, $alpha: 0.3);
+  box-shadow: 0 3px 5px rgba($color: #000000, $alpha: 0.15);
 }
 @media only screen and (max-width: 970px) {
   nav {

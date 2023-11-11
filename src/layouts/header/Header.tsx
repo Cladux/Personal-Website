@@ -6,7 +6,7 @@ const Header = (): JSX.Element => {
   return (
     <>
       <header id="Home">
-        <div className={styles.container}>
+        <div className={styles.headerContainer}>
           <section className={styles.sectionLeft}>
             <div className={styles.container}>
               <h1>Soroush Sharifi</h1>

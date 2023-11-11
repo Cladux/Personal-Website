@@ -1,0 +1,21 @@
+@import "../../../../scssModules/mixin.scss";
+
+.ExperienceBox {
+  height: 140px;
+  p {
+    margin: 5px 0;
+    font-size: var(--font-size-p-medium);
+    font-weight: var(--font-weight-medium);
+  }
+  .date {
+    color: var(--text-color);
+    font-weight: var(--font-weight-semi-bold);
+  }
+  .title {
+    font-size: var(--font-size-p-large);
+    color: var(--primary-color);
+  }
+  .info {
+    color: var(--text-color-gray);
+  }
+}

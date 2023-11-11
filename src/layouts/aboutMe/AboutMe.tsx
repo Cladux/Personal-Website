@@ -1,8 +1,10 @@
 import styles from "./AboutMe.module.scss";
 import Icons from "../../icons";
+import Service from "./components/service/Service";
 
 const AboutMe = (): JSX.Element => {
-  const DotIcon = Icons["dots"];
+  const DotIconLeft = Icons["dotsLeft"];
+  const DotIconTop = Icons["dotsTop"];
   return (
     <>
       <div id="About Me" className={styles.aboutMe}>
@@ -10,7 +12,7 @@ const AboutMe = (): JSX.Element => {
           <div className={styles.bgIcons}>
             <div className={styles.bgText}>ABOUT</div>
             <div className={styles.bgIcon}>
-              <DotIcon />
+              <DotIconLeft />
             </div>
           </div>
           <div className={styles.container}>
@@ -36,10 +38,31 @@ const AboutMe = (): JSX.Element => {
         </section>
         <section className={styles.sectionTow}>
           <div className={styles.container}>
-            <h2>My Services</h2>
+            <h3>My Services</h3>
+            <div className={styles.serviceSection}>
+              <Service setIcon="bxCodeBlock" title="Web Development" />
+              <Service setIcon="bxLayout" title="UI Design" />
+              <Service setIcon="bxMobile" title="Mobile Development" />
+              <Service setIcon="bxRocket" title="Social Media Design" />
+            </div>
           </div>
         </section>
-        <section className={styles.sectionThree}></section>
+        <section className={styles.sectionThree}>
+          <div className={styles.bgIcons}>
+            <div className={styles.bgText}>UT ME</div>
+            <div className={styles.bgIcon}>
+              <DotIconTop />
+            </div>
+          </div>
+          <div className={styles.container}>
+            <div className={styles.leftSection}>
+              <h4>Education</h4>
+            </div>
+            <div className={styles.rightSection}>
+              <h4>Jobs</h4>
+            </div>
+          </div>
+        </section>
       </div>
     </>
   );

@@ -1,0 +1,13 @@
+@import "../../../../scssModules/mixin.scss";
+.serviceBox {
+  @include flex(row, flex-start);
+  gap: 15px;
+  flex-basis: 50%;
+  svg {
+    fill: var(--primary-color);
+  }
+  p {
+    font-size: var(--font-size-p-large);
+    font-weight: var(--font-weight-semi-bold);
+  }
+}

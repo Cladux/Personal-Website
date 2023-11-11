@@ -4,24 +4,25 @@
   height: auto;
   color: var(--text-color);
   .sectionOne {
-    width: 100%;
     height: 745px;
     position: relative;
     overflow: hidden;
-    .bgText {
-      font-size: var(--font-size-bg);
-      font-weight: var(--font-weight-bold);
-      color: var(--bg-color-text);
-      position: absolute;
-      top: 0;
-      right: -180px;
-      z-index: -1;
-    }
-    .bgIcon {
-      position: absolute;
-      bottom: -40px;
-      left: 0;
-      z-index: -1;
+    .bgIcons {
+      .bgText {
+        font-size: var(--font-size-bg);
+        font-weight: var(--font-weight-bold);
+        color: var(--bg-color-text);
+        position: absolute;
+        top: 0;
+        right: -180px;
+        z-index: -1;
+      }
+      .bgIcon {
+        position: absolute;
+        bottom: -40px;
+        left: 0;
+        z-index: -1;
+      }
     }
     .container {
       max-width: 985px;
@@ -53,13 +54,61 @@
     }
   }
   .sectionTow {
-    height: 417px;
+    height: 617px;
     width: 100%;
     background: var(--bg-color-light);
+    padding-top: 84px;
     .container {
-      max-width: 800px;
+      max-width: 1190px;
+      height: 100%;
       margin: auto;
       text-align: center;
+      h3 {
+        font-size: var(--font-size-header-3);
+        font-weight: var(--font-weight-bold);
+        margin-bottom: 30px;
+      }
+      .serviceSection {
+        display: grid;
+        grid-template: 1fr 1fr / 2fr 1fr;
+        flex-wrap: wrap;
+        height: 350px;
+        margin: auto;
+      }
+    }
+  }
+  .sectionThree {
+    height: 906px;
+    position: relative;
+    overflow: hidden;
+    .bgIcons {
+      .bgText {
+        font-size: var(--font-size-bg);
+        font-weight: var(--font-weight-bold);
+        color: var(--bg-color-text);
+        position: absolute;
+        bottom: 0;
+        left: -60px;
+        z-index: -1;
+      }
+      .bgIcon {
+        @include flex;
+        position: absolute;
+        top: -15px;
+        right: 52px;
+        z-index: -1;
+      }
+    }
+    .container {
+      display: grid;
+      grid-template: 1fr / 1fr 1fr;
+      column-gap: 450px;
+      max-width: 1190px;
+      margin: auto;
+      padding-top: 95px;
+      h4 {
+        font-size: var(--font-size-header-3);
+      }
     }
   }
 }

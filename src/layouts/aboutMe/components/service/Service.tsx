@@ -1,12 +1,12 @@
 import styles from "./Service.module.scss";
-import Icons from "../../../icons";
+import Icons from "../../../../icons";
 
 type Props = {
-  setIcon: string;
+  setIcon: keyof typeof Icons;
   title: string;
 };
 
-const Servic = ({ setIcon, title }: Props): JSX.Element => {
+const Service = ({ setIcon, title }: Props): JSX.Element => {
   const Icon = Icons[setIcon];
   return (
     <>
@@ -18,4 +18,4 @@ const Servic = ({ setIcon, title }: Props): JSX.Element => {
   );
 };
 
-export default Servic;
+export default Service;

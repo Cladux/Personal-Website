@@ -392,7 +392,7 @@ const Icons: IconsType = {
         rx="15.2182"
         ry="14.3727"
         fill="white"
-        fill-opacity="0.09"
+        fillOpacity="0.09"
       />
       <ellipse
         cx="15.2182"
@@ -400,7 +400,7 @@ const Icons: IconsType = {
         rx="15.2182"
         ry="14.3727"
         fill="white"
-        fill-opacity="0.09"
+        fillOpacity="0.09"
       />
       <ellipse
         cx="118.364"
@@ -408,7 +408,7 @@ const Icons: IconsType = {
         rx="15.2182"
         ry="14.3727"
         fill="white"
-        fill-opacity="0.09"
+        fillOpacity="0.09"
       />
       <ellipse
         cx="170.782"
@@ -416,91 +416,91 @@ const Icons: IconsType = {
         rx="15.2182"
         ry="14.3727"
         fill="white"
-        fill-opacity="0.09"
+        fillOpacity="0.09"
       />
       <circle
         cx="67.6364"
         cy="120.055"
         r="15.2182"
         fill="white"
-        fill-opacity="0.07"
+        fillOpacity="0.07"
       />
       <circle
         cx="15.2182"
         cy="120.055"
         r="15.2182"
         fill="white"
-        fill-opacity="0.07"
+        fillOpacity="0.07"
       />
       <circle
         cx="118.364"
         cy="120.055"
         r="15.2182"
         fill="white"
-        fill-opacity="0.07"
+        fillOpacity="0.07"
       />
       <circle
         cx="170.782"
         cy="120.055"
         r="15.2182"
         fill="white"
-        fill-opacity="0.07"
+        fillOpacity="0.07"
       />
       <circle
         cx="67.6364"
         cy="15.2182"
         r="15.2182"
         fill="white"
-        fill-opacity="0.1"
+        fillOpacity="0.1"
       />
       <circle
         cx="15.2182"
         cy="15.2182"
         r="15.2182"
         fill="white"
-        fill-opacity="0.1"
+        fillOpacity="0.1"
       />
       <circle
         cx="118.364"
         cy="15.2182"
         r="15.2182"
         fill="white"
-        fill-opacity="0.1"
+        fillOpacity="0.1"
       />
       <circle
         cx="170.782"
         cy="15.2182"
         r="15.2182"
         fill="white"
-        fill-opacity="0.1"
+        fillOpacity="0.1"
       />
       <circle
         cx="67.6364"
         cy="170.782"
         r="15.2182"
         fill="white"
-        fill-opacity="0.05"
+        fillOpacity="0.05"
       />
       <circle
         cx="15.2182"
         cy="170.782"
         r="15.2182"
         fill="white"
-        fill-opacity="0.05"
+        fillOpacity="0.05"
       />
       <circle
         cx="118.364"
         cy="170.782"
         r="15.2182"
         fill="white"
-        fill-opacity="0.05"
+        fillOpacity="0.05"
       />
       <circle
         cx="170.782"
         cy="170.782"
         r="15.2182"
         fill="white"
-        fill-opacity="0.05"
+        fillOpacity="0.05"
       />
     </svg>
   ),

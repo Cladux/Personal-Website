@@ -1,7 +1,8 @@
 @import "../../../../scssModules/mixin.scss";
 
-.ExperienceBox {
-  height: 140px;
+.experienceBox {
+  margin: 52px 0;
+  width: 400px;
   p {
     margin: 5px 0;
     font-size: var(--font-size-p-medium);

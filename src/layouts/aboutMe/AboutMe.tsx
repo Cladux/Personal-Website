@@ -1,6 +1,7 @@
 import styles from "./AboutMe.module.scss";
 import Icons from "../../icons";
 import Service from "./components/service/Service";
+import Experience from "./components/experience/Experience";
 
 const AboutMe = (): JSX.Element => {
   const DotIconLeft = Icons["dotsLeft"];
@@ -57,9 +58,57 @@ const AboutMe = (): JSX.Element => {
           <div className={styles.container}>
             <div className={styles.leftSection}>
               <h4>Education</h4>
+              <Experience
+                startDate="October 2020"
+                endDate="June 2023"
+                experienceTitle="German as a Second Language"
+                info="Österreichisches Sprachdiplom Deutsch"
+              />
+              <Experience
+                startDate="June 2023"
+                endDate="August 2023"
+                experienceTitle="React.js Development"
+                info="Tehran Institute of Technology"
+              />
+              <Experience
+                startDate="March 2022"
+                endDate="December 2022"
+                experienceTitle="JavaScript Programmer for web Applications"
+                info="Iran Technical & Vocational Training"
+              />
+              <Experience
+                startDate="September 2021"
+                endDate="February 2022"
+                experienceTitle="Web Development"
+                info="Iran Technical & Vocational Training"
+              />
+              <Experience
+                startDate="March 2021"
+                endDate="May 2021"
+                experienceTitle="Computer Graphic"
+                info="Iran Technical & Vocational Training"
+              />
             </div>
             <div className={styles.rightSection}>
               <h4>Jobs</h4>
+              <Experience
+                startDate="December 2022"
+                endDate="Present"
+                experienceTitle="Frontend Developer"
+                info="Freelancer"
+              />
+              <Experience
+                startDate="February 2023"
+                endDate="Present"
+                experienceTitle="UI Designer"
+                info="Freelancer"
+              />
+              <Experience
+                startDate="September 2019"
+                endDate="February 2021"
+                experienceTitle="Owner"
+                info="Cadence café"
+              />
             </div>
           </div>
         </section>

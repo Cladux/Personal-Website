@@ -1,6 +1,6 @@
 import styles from "./Projects.module.scss";
 
-const Projects = () => {
+const Projects = (): JSX.Element => {
   return <>Projects</>;
 };
 

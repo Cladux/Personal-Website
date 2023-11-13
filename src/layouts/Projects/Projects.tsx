@@ -26,26 +26,33 @@ const Projects = (): JSX.Element => {
 
   return (
     <>
-      <div>
-        {repos.map((repo, id) => (
-          <div className={styles.card} key={id}>
-            <img src={repo.owner.avatar_url} alt={repo.owner.type} />
-            <h4>{repo.name}</h4>
-            <p>
-              <i>
-                <IconUi />
-              </i>
-              Front-end Development
-            </p>
-            <div className={styles.links}>
-              <a href={repo.svn_url}>
-                view code
-                <IconRight />
-              </a>
-              <a href=""></a>
+      <div id="Projects" className={styles.projects}>
+        <div className={styles.container}>
+          <h2>PROJECTS</h2>
+          <div className={styles.sliderBox}>
+            <div className={styles.slider}>
+              {repos.map((repo, id) => (
+                <div className={styles.card} key={id}>
+                  <img src={repo.owner.avatar_url} alt={repo.owner.type} />
+                  <h4>{repo.name}</h4>
+                  <p>
+                    <i>
+                      <IconUi />
+                    </i>
+                    Front-end Development
+                  </p>
+                  <div className={styles.links}>
+                    <a href={repo.svn_url}>
+                      view code
+                      <IconRight />
+                    </a>
+                    <a href="">Live Preview</a>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
-        ))}
+        </div>
       </div>
     </>
   );

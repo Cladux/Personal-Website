@@ -1,0 +1,70 @@
+@import "../../scssModules/mixin.scss";
+
+.projects {
+  width: 100%;
+  height: 1080px;
+  background: var(--bg-color);
+  $circle-size: 1068px;
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+  padding: 110px 0;
+  &::after {
+    content: "";
+    width: $circle-size;
+    height: $circle-size;
+    border-radius: 50%;
+    background: rgba($color: #fff, $alpha: 0.01);
+    position: absolute;
+    top: -30%;
+    right: -25%;
+    z-index: -1;
+  }
+  &::before {
+    content: "";
+    width: $circle-size;
+    height: $circle-size;
+    border-radius: 50%;
+    background: rgba($color: #fff, $alpha: 0.01);
+    position: absolute;
+    bottom: -40%;
+    left: -15%;
+    z-index: -1;
+  }
+  .container {
+    padding: 0 20px;
+    h2 {
+      @include flex(column);
+      font-size: var(--font-size-header-1);
+      margin: 60px 0;
+      &::after {
+        content: "";
+        width: 65px;
+        height: 5px;
+        background: var(--primary-color);
+      }
+    }
+    .sliderBox {
+      max-width: 1200px;
+      margin: auto;
+      overflow: hidden;
+      .slider {
+        @include flex(row, flex-start);
+        column-gap: 106px;
+        .card {
+          width: 412px;
+          height: 501px;
+          border-radius: 18px;
+          background: var(--bg-color-text);
+          img {
+            height: 321px;
+            border-radius: 18px 18px 0px 0px;
+          }
+          svg {
+            fill: var(--primary-color);
+          }
+        }
+      }
+    }
+  }
+}

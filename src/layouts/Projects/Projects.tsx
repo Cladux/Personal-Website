@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import styles from "./Projects.module.scss";
-import Icons from "../../icons";
+import Card from "./components/Card";
+
 type Repos = {
   id: number;
   name: string;
@@ -10,13 +11,11 @@ type Repos = {
     type: string;
   };
 };
-// type Icons = keyof typeof Icons;
 
 const Projects = (): JSX.Element => {
   const [repos, setRepos] = useState<Repos[]>([]);
-  const IconUi = Icons["bxLayout"];
-  const IconRight = Icons["arrowRight"];
 
+  //get github api on page loaded
   useEffect(() => {
     fetch("https://api.github.com/users/Cladux/repos")
       .then((res) => res.json())
@@ -32,23 +31,14 @@ const Projects = (): JSX.Element => {
           <div className={styles.sliderBox}>
             <div className={styles.slider}>
               {repos.map((repo, id) => (
-                <div className={styles.card} key={id}>
-                  <img src={repo.owner.avatar_url} alt={repo.owner.type} />
-                  <h4>{repo.name}</h4>
-                  <p>
-                    <i>
-                      <IconUi />
-                    </i>
-                    Front-end Development
-                  </p>
-                  <div className={styles.links}>
-                    <a href={repo.svn_url}>
-                      view code
-                      <IconRight />
-                    </a>
-                    <a href="">Live Preview</a>
-                  </div>
-                </div>
+                <Card
+                  key={id}
+                  imgUrl={repo.owner.avatar_url}
+                  imgAlt={repo.owner.type}
+                  title={repo.name}
+                  link={repo.svn_url}
+                  livePreview={repo.svn_url}
+                />
               ))}
             </div>
           </div>

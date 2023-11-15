@@ -25,7 +25,7 @@ const Header = (): JSX.Element => {
                 />
                 <Button
                   setIcon="circleDown"
-                  title="Download Profile"
+                  title="Portfolio"
                   bgTransparent={false}
                 />
               </div>

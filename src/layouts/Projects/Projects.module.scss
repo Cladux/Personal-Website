@@ -51,19 +51,6 @@
       .slider {
         @include flex(row, flex-start);
         column-gap: 106px;
-        .card {
-          width: 412px;
-          height: 501px;
-          border-radius: 18px;
-          background: var(--bg-color-text);
-          img {
-            height: 321px;
-            border-radius: 18px 18px 0px 0px;
-          }
-          svg {
-            fill: var(--primary-color);
-          }
-        }
       }
     }
   }

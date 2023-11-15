@@ -1,0 +1,39 @@
+@import "../../../scssModules/mixin.scss";
+
+.card {
+  width: 412px;
+  height: 501px;
+  border-radius: 18px;
+  background: var(--bg-color-text);
+  img {
+    height: 321px;
+    border-radius: 18px 18px 0px 0px;
+  }
+  h4 {
+    font-size: var(--font-size-p-small);
+    font-weight: var(--font-weight-bold);
+    margin: 5px 25px;
+  }
+  p {
+    @include flex(row, flex-start);
+    gap: 7px;
+    margin: 5px 25px;
+    svg {
+      $size: 28px;
+      fill: var(--primary-color);
+      width: $size;
+      height: $size;
+    }
+  }
+  .links {
+    @include flex(row, space-between);
+    margin: 25px 25px 5px;
+    .viewCode {
+      @include flex(row, flex-start);
+      gap: 10px;
+      svg {
+        fill: var(--text-color);
+      }
+    }
+  }
+}

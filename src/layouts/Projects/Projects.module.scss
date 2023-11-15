@@ -45,12 +45,14 @@
       }
     }
     .sliderBox {
-      max-width: 1200px;
+      max-width: 1440px;
       margin: auto;
-      overflow: hidden;
+      overflow-x: scroll;
+      overflow-y: hidden;
       .slider {
         @include flex(row, flex-start);
-        column-gap: 106px;
+        column-gap: 100px;
+        width: auto;
       }
     }
   }

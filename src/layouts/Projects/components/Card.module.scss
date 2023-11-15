@@ -1,38 +1,61 @@
 @import "../../../scssModules/mixin.scss";
 
 .card {
-  width: 412px;
+  @include flex(column, center, flex-start);
+  min-width: 412px;
   height: 501px;
   border-radius: 18px;
   background: var(--bg-color-text);
-  img {
-    height: 321px;
-    border-radius: 18px 18px 0px 0px;
-  }
-  h4 {
-    font-size: var(--font-size-p-small);
-    font-weight: var(--font-weight-bold);
-    margin: 5px 25px;
-  }
-  p {
-    @include flex(row, flex-start);
-    gap: 7px;
-    margin: 5px 25px;
-    svg {
-      $size: 28px;
-      fill: var(--primary-color);
-      width: $size;
-      height: $size;
+  .thumbnail {
+    height: 60%;
+    min-width: 100%;
+    img {
+      width: 100%;
+      height: 100%;
+      border-radius: 18px 18px 0px 0px;
     }
   }
-  .links {
-    @include flex(row, space-between);
-    margin: 25px 25px 5px;
-    .viewCode {
+  .info {
+    height: 40%;
+    @include flex(column, space-between, flex-start);
+    flex-basis: 100%;
+    padding: 25px;
+    min-width: 100%;
+    h4 {
+      font-size: var(--font-size-p-small);
+      font-weight: var(--font-weight-bold);
+    }
+    p {
       @include flex(row, flex-start);
-      gap: 10px;
+      gap: 7px;
+
       svg {
-        fill: var(--text-color);
+        $size: 28px;
+        fill: var(--primary-color);
+        width: $size;
+        height: $size;
+      }
+    }
+    .links {
+      @include flex(row, space-between);
+      font-size: var(--font-size-p-small);
+      font-weight: var(--font-weight-semi-bold);
+      width: 100%;
+      .viewCode {
+        @include flex(row, flex-start);
+        gap: 10px;
+        svg {
+          fill: var(--text-color);
+        }
+      }
+      .livePreview {
+        @include flex;
+
+        width: 170px;
+        height: 42px;
+        border-radius: 10px;
+        background: var(--primary-color);
+        color: var(--bg-color);
       }
     }
   }

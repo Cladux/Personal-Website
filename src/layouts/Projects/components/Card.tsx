@@ -20,22 +20,26 @@ const Card = ({
   return (
     <>
       <div className={styles.card}>
-        <img src={imgUrl} alt={imgAlt} />
-        <h4>{title}</h4>
-        <p>
-          <i>
-            <IconUi />
-          </i>
-          Front-end Development
-        </p>
-        <div className={styles.links}>
-          <a className={styles.viewCode} href={link}>
-            view code
-            <IconRight />
-          </a>
-          <a className={styles.livePreview} href={livePreview}>
-            Live Preview
-          </a>
+        <div className={styles.thumbnail}>
+          <img src={imgUrl} alt={imgAlt} />
+        </div>
+        <div className={styles.info}>
+          <h4>{title}</h4>
+          <p>
+            <i>
+              <IconUi />
+            </i>
+            Front-end Development
+          </p>
+          <div className={styles.links}>
+            <a className={styles.viewCode} href={link}>
+              view code
+              <IconRight />
+            </a>
+            <a className={styles.livePreview} href={livePreview}>
+              Live Preview
+            </a>
+          </div>
         </div>
       </div>
     </>

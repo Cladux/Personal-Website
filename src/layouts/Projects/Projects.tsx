@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useRef, useState, useEffect } from "react";
 import styles from "./Projects.module.scss";
 import Card from "./components/Card";
 
@@ -14,6 +14,8 @@ type Repos = {
 
 const Projects = (): JSX.Element => {
   const [repos, setRepos] = useState<Repos[]>([]);
+  const [Width, setWidth] = useState<number>(0);
+  const [sliderBtn, setSliderBtn] = useState<[]>([]);
 
   //get github api on page loaded
   useEffect(() => {
@@ -23,13 +25,23 @@ const Projects = (): JSX.Element => {
       .catch((err) => console.log(err));
   }, []);
 
+  //get slider Width
+  const sliderRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (sliderRef.current) {
+      setWidth(sliderRef.current.scrollWidth);
+    }
+  }, [sliderRef, repos]);
+  const UNIT: number = 1440;
+  console.log(Width);
   return (
     <>
       <div id="Projects" className={styles.projects}>
         <div className={styles.container}>
           <h2>PROJECTS</h2>
           <div className={styles.sliderBox}>
-            <div className={styles.slider}>
+            <div className={styles.slider} ref={sliderRef}>
               {repos.map((repo, id) => (
                 <Card
                   key={id}

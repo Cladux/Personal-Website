@@ -47,12 +47,28 @@
     .sliderBox {
       max-width: 1440px;
       margin: auto;
-      overflow-x: scroll;
-      overflow-y: hidden;
+      overflow: hidden;
       .slider {
         @include flex(row, flex-start);
+        @include transition(1s, 0, ease-in-out);
         column-gap: 100px;
         width: auto;
+      }
+    }
+    .sliderBtn {
+      @include flex;
+      gap: 10px;
+      width: 100%;
+      height: 130px;
+      & > li {
+        $size: 15px;
+        width: $size;
+        height: $size;
+        border: 3px solid var(--primary-color);
+        border-radius: 50%;
+      }
+      .active {
+        background: var(--primary-color);
       }
     }
   }

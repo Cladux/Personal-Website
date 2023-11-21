@@ -14,8 +14,9 @@ type Repos = {
 
 const Projects = (): JSX.Element => {
   const [repos, setRepos] = useState<Repos[]>([]);
-  const [Width, setWidth] = useState<number>(0);
-  const [sliderBtn, setSliderBtn] = useState<[]>([]);
+  const [width, setWidth] = useState<number>(0);
+  const [sliderBtn, setSliderBtn] = useState<string[]>([""]);
+  const [widthPosition, setWidthPosition] = useState<number>(0);
 
   //get github api on page loaded
   useEffect(() => {
@@ -25,23 +26,36 @@ const Projects = (): JSX.Element => {
       .catch((err) => console.log(err));
   }, []);
 
-  //get slider Width
+  //get slider Width when get api
   const sliderRef = useRef<HTMLDivElement>(null);
-
   useEffect(() => {
     if (sliderRef.current) {
       setWidth(sliderRef.current.scrollWidth);
     }
   }, [sliderRef, repos]);
+
+  // set slider Buttons when set slider Width
   const UNIT: number = 1440;
-  console.log(Width);
+  useEffect(() => {
+    for (let i = UNIT; i < width; i += UNIT) {
+      setSliderBtn((prevSliderBtn) => [...prevSliderBtn, ""]);
+    }
+  }, [width]);
+  const sliderBtnHandler = (index: number) => {
+    setWidthPosition(UNIT * index + 95 * index);
+  };
+
   return (
     <>
       <div id="Projects" className={styles.projects}>
         <div className={styles.container}>
           <h2>PROJECTS</h2>
           <div className={styles.sliderBox}>
-            <div className={styles.slider} ref={sliderRef}>
+            <div
+              className={styles.slider}
+              ref={sliderRef}
+              style={{ transform: `translateX(-${widthPosition}px)` }}
+            >
               {repos.map((repo, id) => (
                 <Card
                   key={id}
@@ -54,6 +68,17 @@ const Projects = (): JSX.Element => {
               ))}
             </div>
           </div>
+          <ul className={styles.sliderBtn}>
+            {sliderBtn.map((value, index) => (
+              <li
+                key={index}
+                onClick={() => sliderBtnHandler(index)}
+                className={""}
+              >
+                {value}
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     </>

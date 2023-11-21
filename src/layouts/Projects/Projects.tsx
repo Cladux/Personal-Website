@@ -42,6 +42,7 @@ const Projects = (): JSX.Element => {
       setSliderBtn((prevSliderBtn) => [...prevSliderBtn, ""]);
     }
   }, [width]);
+  // slide the slider when btn clicked
   const sliderBtnHandler = (index: number) => {
     setWidthPosition(UNIT * index + 95 * index);
   };

@@ -17,6 +17,7 @@ const Projects = (): JSX.Element => {
   const [width, setWidth] = useState<number>(0);
   const [sliderBtn, setSliderBtn] = useState<string[]>([""]);
   const [widthPosition, setWidthPosition] = useState<number>(0);
+  const [active, setActive] = useState<number>(0);
 
   //get github api on page loaded
   useEffect(() => {
@@ -43,6 +44,10 @@ const Projects = (): JSX.Element => {
   }, [width]);
   const sliderBtnHandler = (index: number) => {
     setWidthPosition(UNIT * index + 95 * index);
+  };
+  // set active class for slider btn
+  const activeClassHandle = (index: number) => {
+    return active === index ? styles.active : "";
   };
 
   return (
@@ -72,8 +77,11 @@ const Projects = (): JSX.Element => {
             {sliderBtn.map((value, index) => (
               <li
                 key={index}
-                onClick={() => sliderBtnHandler(index)}
-                className={""}
+                onClick={() => {
+                  sliderBtnHandler(index);
+                  setActive(index);
+                }}
+                className={activeClassHandle(index)}
               >
                 {value}
               </li>

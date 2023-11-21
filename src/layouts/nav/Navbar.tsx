@@ -5,10 +5,12 @@ const Navbar = (): JSX.Element => {
   const [active, setActive] = useState<number>(0);
   const [bg, setBg] = useState<boolean>(false);
 
+  // set active class when nav btn clicked
   const activeClassHandle = (index: number) => {
     return active === index ? styles.active : "";
   };
 
+  // set bg to header nav when scrolled
   const activeBgHandle = () => {
     return bg ? styles.navBg : "";
   };
@@ -17,13 +19,12 @@ const Navbar = (): JSX.Element => {
   const menuItems: string[] = ["Home", "About Me", "Projects", "Contact"];
 
   //set page Y offset every layouts here
-  const PAGE_POSITIONS: number[] = useMemo(() => [0, 900, 3500], []);
+  const PAGE_POSITIONS: number[] = useMemo(() => [0, 900, 3500, 4500], []);
 
-  // useEffect for listen pageYoffset
+  // listening pageYoffset
   useEffect(() => {
     const handleScroll = () => {
       const position = Math.round(window.pageYOffset);
-      // console.log(position);
       if (position >= 5) {
         setBg(true);
       } else {

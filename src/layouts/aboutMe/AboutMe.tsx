@@ -4,6 +4,7 @@ import Service from "./components/service/Service";
 import Experience from "./components/experience/Experience";
 
 const AboutMe = (): JSX.Element => {
+  // need only tow icons here
   const DotIconLeft = Icons["dotsLeft"];
   const DotIconTop = Icons["dotsTop"];
   return (

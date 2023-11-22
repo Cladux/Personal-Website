@@ -75,3 +75,16 @@
     }
   }
 }
+
+@media only screen and (max-width: 1200px) {
+  .projects {
+    .container {
+      .sliderBox {
+        overflow-x: scroll;
+      }
+      .sliderBtn {
+        display: none;
+      }
+    }
+  }
+}

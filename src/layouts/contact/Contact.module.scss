@@ -12,6 +12,7 @@
     border-radius: 33px;
     overflow: hidden;
     .rightSection {
+      padding: 90px 140px;
       background: var(--bg-color);
       flex-basis: 55%;
       height: 100%;
@@ -22,8 +23,8 @@
     .leftSection {
       padding: 90px 140px;
       position: relative;
-      flex-basis: 45%;
       background: var(--bg-color-text);
+      flex-basis: 45%;
       height: 100%;
       &::before {
         content: "";

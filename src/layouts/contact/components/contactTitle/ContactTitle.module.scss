@@ -1,0 +1,10 @@
+@import "../../../../scssModules/mixin.scss";
+.titleBox {
+  @include flex;
+  gap: 10px;
+
+  p {
+    font-size: var(--font-size-p-medium);
+    font-weight: var(--font-weight-medium);
+  }
+}

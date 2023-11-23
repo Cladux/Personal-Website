@@ -1,10 +1,58 @@
+@import "../../scssModules/mixin.scss";
 .contact {
   width: 100%;
   height: auto;
+  background: var(--bg-color-dark);
   .container {
+    @include flex;
+    width: 90%;
     max-width: 1436px;
     height: 685px;
-    max-width: 1200px;
-    margin: 213px 0;
+    margin: 213px auto;
+    border-radius: 33px;
+    overflow: hidden;
+    .rightSection {
+      background: var(--bg-color);
+      flex-basis: 55%;
+      height: 100%;
+      form {
+        @include flex(column);
+      }
+    }
+    .leftSection {
+      padding: 90px 140px;
+      position: relative;
+      flex-basis: 45%;
+      background: var(--bg-color-text);
+      height: 100%;
+      &::before {
+        content: "";
+        width: 50%;
+        height: 3px;
+        background: var(--text-color);
+        position: absolute;
+        right: 0;
+        top: 18%;
+      }
+      &::after {
+        content: "";
+        width: 50%;
+        height: 3px;
+        background: var(--text-color);
+        position: absolute;
+        left: 0;
+        bottom: 17%;
+      }
+      h4 {
+        font-size: var(--font-size-header-4);
+        font-weight: var(--font-weight-semi-bold);
+        margin: 6px;
+      }
+      .contactTitleBox {
+        @include flex(column, space-between, flex-start);
+        row-gap: 56px;
+        margin-top: 80px;
+      }
+    }
   }
 }

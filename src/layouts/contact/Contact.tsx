@@ -1,4 +1,4 @@
-import { FormEvent, useState } from "react";
+import { useRef, FormEvent, useState } from "react";
 import styles from "./Contact.module.scss";
 import ContactTitle from "./components/contactTitle/ContactTitle";
 import Icons from "../../icons";
@@ -9,11 +9,25 @@ const Contact = (): JSX.Element => {
   const [subject, setSubject] = useState<string>("");
   const [message, setMessage] = useState<string>("");
 
+  // auto copy email wen click
+  const emailRef = useRef<HTMLAnchorElement>(null);
+  const copyText = () => {
+    const text = emailRef.current?.innerText;
+    if (text) {
+      navigator.clipboard
+        .writeText(text)
+        .then(() => alert(`Email copied: ${text}`))
+        .catch((err) => alert(`Could not copy text: ${err}`));
+    }
+  };
+
+  //submit form handle
   const handleSubmit = (event: FormEvent) => {
     event.preventDefault();
 
     // Check if any field is empty
     if (!name || !email || !subject || !message) {
+      // Show Please fill out pop-up
       alert("Please fill out all fields.");
       return;
     }
@@ -27,7 +41,7 @@ const Contact = (): JSX.Element => {
     setSubject("");
     setMessage("");
 
-    // Show pop-up
+    // Show submitted pop-up
     alert("Form submitted successfully!");
   };
   const Icon = Icons["mailOpen"];
@@ -38,12 +52,28 @@ const Contact = (): JSX.Element => {
           <div className={styles.leftSection}>
             <h4>CONTACT</h4>
             <div className={styles.contactTitleBox}>
-              <ContactTitle setIcon="phone" setTitle="+98 903 081 4004" />
-              <ContactTitle
-                setIcon="mail"
-                setTitle="sharifysoroush@gmail.com"
-              />
-              <ContactTitle setIcon="locationMarker" setTitle="Hamedan, Iran" />
+              <a href="tel:+989030814004">
+                <ContactTitle setIcon="phone" setTitle="+98 903 081 4004" />
+              </a>
+              <a
+                href="mailto:sharifysoroush@gmail.com?"
+                ref={emailRef}
+                onClick={copyText}
+              >
+                <ContactTitle
+                  setIcon="mail"
+                  setTitle="sharifysoroush@gmail.com"
+                />
+              </a>
+              <a
+                href="https://maps.app.goo.gl/p8CuHKgSvjTGSqJY7"
+                target="_blank"
+              >
+                <ContactTitle
+                  setIcon="locationMarker"
+                  setTitle="Hamedan, Iran"
+                />
+              </a>
             </div>
           </div>
           <div className={styles.rightSection}>

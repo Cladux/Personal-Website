@@ -1,7 +1,8 @@
 import styles from "./Card.module.scss";
 import Icons from "../../../icons";
 type Props = {
-  imgUrl: string;
+  username: string;
+  repoName: string;
   imgAlt: string;
   title: string;
   link: string;
@@ -9,7 +10,8 @@ type Props = {
 };
 
 const Card = ({
-  imgUrl,
+  username,
+  repoName,
   imgAlt,
   title,
   link,
@@ -21,7 +23,10 @@ const Card = ({
     <>
       <div className={styles.card}>
         <div className={styles.thumbnail}>
-          <img src={imgUrl} alt={imgAlt} />
+          <img
+            src={`https://github-readme-stats.vercel.app/api/pin/?username=${username}&repo=${repoName}`}
+            alt={imgAlt}
+          />
         </div>
         <div className={styles.info}>
           <h4>{title}</h4>

@@ -53,6 +53,7 @@
         @include transition(1s, 0, ease-in-out);
         column-gap: 100px;
         width: auto;
+        padding-bottom: 40px;
       }
     }
     .sliderBtn {

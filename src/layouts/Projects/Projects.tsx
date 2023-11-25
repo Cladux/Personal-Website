@@ -7,7 +7,7 @@ type Repos = {
   name: string;
   svn_url: string;
   owner: {
-    avatar_url: string;
+    login: string;
     type: string;
   };
 };
@@ -65,7 +65,8 @@ const Projects = (): JSX.Element => {
               {repos.map((repo, id) => (
                 <Card
                   key={id}
-                  imgUrl={repo.owner.avatar_url}
+                  username={repo.owner.login}
+                  repoName={repo.name}
                   imgAlt={repo.owner.type}
                   title={repo.name}
                   link={repo.svn_url}

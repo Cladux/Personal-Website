@@ -13,6 +13,7 @@ const App = (): JSX.Element => {
       <AboutMe />
       <Projects />
       <Contact />
+      <footer>© 2023 Seyed Soroush Sharifi All rights reserved</footer>
     </>
   );
 };

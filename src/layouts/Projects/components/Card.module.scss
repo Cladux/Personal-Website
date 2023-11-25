@@ -1,15 +1,18 @@
 @import "../../../scssModules/mixin.scss";
 
 .card {
-  @include flex(column, center, flex-start);
+  // @include flex(column, center, flex-start);
   min-width: 412px;
   height: 501px;
   border-radius: 18px;
   background: var(--bg-color-text);
+
   .thumbnail {
     height: 60%;
-    min-width: 100%;
+    width: 100%;
+    background: var(--bg-color-light);
     img {
+      // display: none;
       width: 100%;
       height: 100%;
       border-radius: 18px 18px 0px 0px;

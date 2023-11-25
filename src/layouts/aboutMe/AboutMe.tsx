@@ -91,7 +91,7 @@ const AboutMe = (): JSX.Element => {
               />
             </div>
             <div className={styles.rightSection}>
-              <h4>Jobs</h4>
+              <h4>Jobs Experience</h4>
               <Experience
                 startDate="December 2022"
                 endDate="Present"

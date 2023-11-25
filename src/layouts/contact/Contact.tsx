@@ -1,7 +1,9 @@
 import styles from "./Contact.module.scss";
 import ContactTitle from "./components/contactTitle/ContactTitle";
+import Icons from "../../icons";
 
 const Contact = (): JSX.Element => {
+  const Icon = Icons["mailOpen"];
   return (
     <>
       <section className={styles.contact} id="Contact">
@@ -19,18 +21,30 @@ const Contact = (): JSX.Element => {
           </div>
           <div className={styles.rightSection}>
             <form action="">
-              {/* i cant for this div element set a class! */}
-              <div className={styles.boxWrapper}>
+              <div className={styles.inputName}>
                 <label htmlFor="your-name">Your name</label>
                 <input type="text" id="your-name" />
               </div>
-              <label htmlFor="your-email">Your Email</label>
-              <input type="email" id="your-email" />
-              <label htmlFor="subject">Subject</label>
-              <input type="text" id="subject" />
-              <label htmlFor="massage">Massage</label>
-              <textarea id="massage"></textarea>
-              <input type="submit" value="Send" />
+              <div className={styles.inputEmail}>
+                <label htmlFor="your-email">Your Email</label>
+                <input type="email" id="your-email" />
+              </div>
+              <div className={styles.inputSubject}>
+                <label htmlFor="subject">Subject</label>
+                <input type="text" id="subject" />
+              </div>
+              <div className={styles.inputMassage}>
+                <label htmlFor="massage">Massage</label>
+                <textarea id="massage"></textarea>
+              </div>
+              <div className={styles.inputSubmit}>
+                <button className={styles.submit}>
+                  <i>
+                    <Icon />
+                  </i>
+                  Send
+                </button>
+              </div>
             </form>
           </div>
         </div>

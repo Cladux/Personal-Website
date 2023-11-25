@@ -19,8 +19,11 @@ const Contact = (): JSX.Element => {
           </div>
           <div className={styles.rightSection}>
             <form action="">
-              <label htmlFor="your-name">Your name</label>
-              <input type="text" id="your-name" />
+              {/* i cant for this div element set a class! */}
+              <div className={styles.boxWrapper}>
+                <label htmlFor="your-name">Your name</label>
+                <input type="text" id="your-name" />
+              </div>
               <label htmlFor="your-email">Your Email</label>
               <input type="email" id="your-email" />
               <label htmlFor="subject">Subject</label>

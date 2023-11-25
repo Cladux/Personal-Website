@@ -11,15 +11,6 @@
     margin: 213px auto;
     border-radius: 33px;
     overflow: hidden;
-    .rightSection {
-      padding: 90px 140px;
-      background: var(--bg-color);
-      flex-basis: 55%;
-      height: 100%;
-      form {
-        @include flex(column);
-      }
-    }
     .leftSection {
       padding: 90px 140px;
       position: relative;
@@ -53,6 +44,18 @@
         @include flex(column, space-between, flex-start);
         row-gap: 56px;
         margin-top: 80px;
+      }
+    }
+    .rightSection {
+      padding: 90px 140px;
+      background: var(--bg-color);
+      flex-basis: 55%;
+      height: 100%;
+      form {
+        display: grid;
+        & > div[class*="_inputBox"] {
+          display: none;
+        }
       }
     }
   }

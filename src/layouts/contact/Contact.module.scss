@@ -121,3 +121,61 @@
     }
   }
 }
+
+@media only screen and (max-width: 1200px) {
+  .contact {
+    .container {
+      @include flex(column);
+      height: 1200px;
+      .leftSection {
+        padding: 40px 75px;
+        min-width: 100%;
+        border-radius: 33px 33px 0 0;
+        h4 {
+          text-align: center;
+        }
+      }
+      .rightSection {
+        border-radius: 0 0 33px 33px;
+        min-width: 100%;
+        form {
+          column-gap: 25px;
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 768px) {
+  .contact {
+    .container {
+      padding: 0 5px;
+
+      .leftSection {
+        // padding: 40px 60px;
+        min-width: 100%;
+      }
+      .rightSection {
+        min-height: 700px;
+        min-width: 100%;
+        form {
+          grid-template: repeat(5, 1fr) / 1fr;
+          .inputName {
+            grid-area: 1 / 1 / 1 / end;
+          }
+          .inputEmail {
+            grid-area: 2 / 1 / 2 / end;
+          }
+          .inputSubject {
+            grid-area: 3 / 1 / 4 / end;
+          }
+          .inputMessage {
+            grid-area: 4 / 1 / end / end;
+          }
+          .inputSubmit {
+            grid-area: end / 1 / end / end;
+          }
+        }
+      }
+    }
+  }
+}

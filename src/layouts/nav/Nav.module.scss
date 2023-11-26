@@ -77,3 +77,10 @@ nav {
     }
   }
 }
+@media only screen and (max-width: 970px) {
+  nav {
+    .navList {
+      gap: 30px;
+    }
+  }
+}

@@ -116,12 +116,11 @@ header {
       }
       // section right
       .sectionRight {
-        flex-basis: 50%;
         .circle {
           $size: 700px;
           width: $size;
           height: $size;
-          transform: translate(-50%, -30%);
+          transform: translate(-50%, 60%);
         }
       }
     }
@@ -137,7 +136,7 @@ header {
           $size: 500px;
           width: $size;
           height: $size;
-          transform: translate(-50%, -40%);
+          transform: translate(-50%, 100%);
         }
       }
     }

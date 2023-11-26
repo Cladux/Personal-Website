@@ -81,6 +81,10 @@ header {
         box-shadow: 0 5px 40px var(--primary-color),
           inset 0 5px 40px var(--primary-color);
       }
+      .image {
+        position: absolute;
+        z-index: 99;
+      }
     }
   }
 }

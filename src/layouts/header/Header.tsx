@@ -1,6 +1,7 @@
 import Button from "./components/Button/Button.tsx";
 import styles from "./Header.module.scss";
 import SocialLink from "./components/SocialLink/SocialLink.tsx";
+import Image from "../../assets/img/Soroush.png";
 
 const Header = (): JSX.Element => {
   return (
@@ -47,6 +48,7 @@ const Header = (): JSX.Element => {
           </section>
           <section className={styles.sectionRight}>
             <div className={styles.circle}></div>
+            <img src={Image} alt="" className={styles.image} />
           </section>
         </div>
       </header>

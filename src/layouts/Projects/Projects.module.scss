@@ -82,6 +82,9 @@
     .container {
       .sliderBox {
         overflow-x: scroll;
+        .slider {
+          column-gap: 50px;
+        }
       }
       .sliderBtn {
         display: none;

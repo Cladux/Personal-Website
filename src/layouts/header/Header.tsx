@@ -34,14 +34,17 @@ const Header = (): JSX.Element => {
                 <SocialLink
                   setIcon="instagram"
                   setLink="https://www.instagram.com/cladux_/"
+                  setName="Instagram"
                 />
                 <SocialLink
                   setIcon="github"
                   setLink="https://github.com/Cladux"
+                  setName="Github"
                 />
                 <SocialLink
                   setIcon="linkedIn"
                   setLink="https://www.linkedin.com/in/cladux/"
+                  setName="LinkedIn"
                 />
               </div>
             </div>

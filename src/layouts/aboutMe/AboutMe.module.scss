@@ -121,10 +121,13 @@
   .aboutMe {
     .sectionTow {
       .container {
+        overflow: hidden;
+
         h3 {
           margin-bottom: 80px;
         }
         .serviceSection {
+          max-width: 60%;
           grid-template: repeat(4, 1fr) / 1fr;
           row-gap: 80px;
           padding-top: 40px;
@@ -144,3 +147,15 @@
     }
   }
 }
+
+// @media only screen and (max-width: 417px) {
+//   .aboutMe {
+//     .sectionTow {
+//       .container {
+//         .serviceSection {
+//           justify-items: start;
+//         }
+//       }
+//     }
+//   }
+// }

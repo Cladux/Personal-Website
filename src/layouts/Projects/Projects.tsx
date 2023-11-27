@@ -55,7 +55,7 @@ const Projects = (): JSX.Element => {
     <>
       <div id="Projects" className={styles.projects}>
         <div className={styles.container}>
-          <h2>PROJECTS</h2>
+          <h2>GITHUB PROJECTS</h2>
           <div className={styles.sliderBox}>
             <div
               className={styles.slider}

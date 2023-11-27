@@ -88,7 +88,7 @@ const Contact = (): JSX.Element => {
                 />
               </div>
               <div className={styles.inputEmail}>
-                <label htmlFor="your-email">Your Email</label>
+                <label htmlFor="your-email">Your Email *</label>
                 <input
                   type="email"
                   id="your-email"
@@ -106,7 +106,7 @@ const Contact = (): JSX.Element => {
                 />
               </div>
               <div className={styles.inputMessage}>
-                <label htmlFor="message">Massage</label>
+                <label htmlFor="message">Massage *</label>
                 <textarea
                   id="message"
                   value={message}

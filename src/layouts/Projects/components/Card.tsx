@@ -37,11 +37,15 @@ const Card = ({
             Front-end Development
           </p>
           <div className={styles.links}>
-            <a className={styles.viewCode} href={link}>
+            <a className={styles.viewCode} href={link} target="_blank">
               view code
               <IconRight />
             </a>
-            <a className={styles.livePreview} href={livePreview}>
+            <a
+              className={styles.livePreview}
+              href={livePreview}
+              target="_blank"
+            >
               Live Preview
             </a>
           </div>

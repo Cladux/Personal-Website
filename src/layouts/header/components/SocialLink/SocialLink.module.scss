@@ -1,15 +1,17 @@
 @import "../../../../scssModules/mixin.scss";
 .iconBox {
-  $size: 50px;
   @include flex;
+  $size: 50px;
   width: $size;
   height: $size;
   border-radius: 50%;
   background: var(--bg-color-light);
+  cursor: pointer;
   a {
     @include flex;
     svg {
       fill: var(--text-color);
+      @include transition;
     }
   }
 }

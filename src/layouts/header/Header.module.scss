@@ -16,6 +16,7 @@ header {
     max-width: 1920px;
     margin: auto;
     position: relative;
+
     // left section
     .sectionLeft {
       flex-basis: 70%;
@@ -59,9 +60,31 @@ header {
         .socialBoxes {
           @include flex;
           gap: 31px;
+          & > div:nth-child(1):hover {
+            a {
+              svg {
+                fill: #dc2743;
+              }
+            }
+          }
+          & > div:nth-child(2):hover {
+            a {
+              svg {
+                fill: #171515;
+              }
+            }
+          }
+          & > div:nth-child(3):hover {
+            a {
+              svg {
+                fill: #2867b2;
+              }
+            }
+          }
         }
       }
     }
+
     // right section
     .sectionRight {
       flex-basis: 30%;
@@ -82,8 +105,12 @@ header {
           inset 0 5px 40px var(--primary-color);
       }
       .image {
+        width: 700px;
         position: absolute;
-        z-index: 99;
+        right: 21%;
+        bottom: 0;
+        z-index: 1;
+        filter: grayscale(80%);
       }
     }
   }

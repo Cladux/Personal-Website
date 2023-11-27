@@ -69,14 +69,7 @@ nav {
   background: var(--bg-color-light);
   box-shadow: 0 3px 5px rgba($color: #000000, $alpha: 0.15);
 }
-@media only screen and (max-width: 970px) {
-  nav {
-    height: 100px;
-    .navList {
-      gap: 45px;
-    }
-  }
-}
+
 @media only screen and (max-width: 970px) {
   nav {
     .navList {

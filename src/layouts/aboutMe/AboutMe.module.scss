@@ -148,14 +148,14 @@
   }
 }
 
-// @media only screen and (max-width: 417px) {
-//   .aboutMe {
-//     .sectionTow {
-//       .container {
-//         .serviceSection {
-//           justify-items: start;
-//         }
-//       }
-//     }
-//   }
-// }
+@media only screen and (max-width: 417px) {
+  .aboutMe {
+    .sectionTow {
+      .container {
+        .serviceSection {
+          margin-left: 20px;
+        }
+      }
+    }
+  }
+}

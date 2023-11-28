@@ -105,10 +105,11 @@ header {
           inset 0 5px 40px var(--primary-color);
       }
       .image {
-        width: 700px;
+        width: 750px;
         position: absolute;
-        right: 21%;
-        bottom: 0;
+        bottom: 0%;
+        left: 50%;
+        transform: translateX(-30%);
         z-index: 1;
         filter: grayscale(80%);
       }
@@ -153,6 +154,11 @@ header {
           height: $size;
           transform: translate(-50%, 60%);
         }
+        .image {
+          width: 500px;
+          left: 50%;
+          transform: translateX(-50%);
+        }
       }
     }
   }
@@ -161,15 +167,24 @@ header {
 //media query sm
 @media only screen and (max-width: 768px) {
   header {
+    height: 1300px;
     .headerContainer {
       .sectionRight {
         .circle {
           $size: 500px;
           width: $size;
           height: $size;
-          transform: translate(-50%, 100%);
+          transform: translate(-50%, 80%);
+        }
+        .image {
+          width: 400px;
         }
       }
     }
+  }
+}
+@media only screen and (max-width: 512px) {
+  header {
+    height: 1500px;
   }
 }

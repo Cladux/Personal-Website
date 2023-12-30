@@ -2,12 +2,17 @@ import { useRef, FormEvent, useState } from "react";
 import styles from "./Contact.module.scss";
 import ContactTitle from "./components/contactTitle/ContactTitle";
 import Icons from "../../icons";
+import emailjs from "emailjs-com";
 
 const Contact = (): JSX.Element => {
   const [name, setName] = useState<string>("");
   const [email, setEmail] = useState<string>("");
   const [subject, setSubject] = useState<string>("");
   const [message, setMessage] = useState<string>("");
+  const templateParams = {
+    name: "Soroush",
+    notes: "Check this out!",
+  };
 
   // auto copy email wen click
   const emailRef = useRef<HTMLAnchorElement>(null);
@@ -25,6 +30,22 @@ const Contact = (): JSX.Element => {
   const handleSubmit = (event: FormEvent) => {
     event.preventDefault();
 
+    //emailjs 
+    emailjs
+      .send(
+        "service_cxxzf95",
+        "template_m21jpdj",
+        templateParams,
+        "20wX-LPdJwHrijlCJ"
+      )
+      .then(
+        (response) => {
+          console.log("SUCCESS!", response.status, response.text);
+        },
+        (err) => {
+          console.log("FAILED...", err);
+        }
+      );
     // Check if any field is empty
     if (!name || !email || !subject || !message) {
       // Show Please fill out pop-up

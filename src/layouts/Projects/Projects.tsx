@@ -36,7 +36,7 @@ const Projects = (): JSX.Element => {
   }, [sliderRef, repos]);
 
   // set slider Buttons when set slider Width
-  const UNIT: number = 1440;
+  const UNIT: number = 1200;
   useEffect(() => {
     for (let i = UNIT; i < width; i += UNIT) {
       setSliderBtn((prevSliderBtn) => [...prevSliderBtn, ""]);

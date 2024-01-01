@@ -26,12 +26,11 @@
       }
     }
     .container {
-      max-width: 985px;
+      max-width: 920px;
       margin: auto;
       text-align: center;
       article {
         margin: 0 30px;
-        // margin-top: 146px;
         h2 {
           @include flex(column);
           font-size: var(--font-size-header-1);
@@ -44,7 +43,7 @@
           }
         }
         p {
-          font-size: var(--font-size-p-large);
+          font-size: var(--font-size-p-medium);
           color: var(--text-color-gray);
           margin-bottom: 40px;
           span {
@@ -60,7 +59,7 @@
     width: 100%;
     background: var(--bg-color-light);
     .container {
-      max-width: 1190px;
+      max-width: 920px;
       height: 100%;
       margin: auto;
       text-align: center;
@@ -104,8 +103,8 @@
     .container {
       display: grid;
       grid-template: 1fr / 1fr 1fr;
-      column-gap: 380px;
-      max-width: 1190px;
+      column-gap: 120px;
+      max-width: 980px;
       margin: auto;
       padding: 0 30px;
       padding-top: 95px;

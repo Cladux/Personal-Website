@@ -6,8 +6,8 @@
   .container {
     @include flex;
     width: 90%;
-    max-width: 1436px;
-    height: 685px;
+    max-width: 1200px;
+    height: 600px;
     margin: 213px auto;
     border-radius: 33px;
     overflow: hidden;
@@ -76,7 +76,7 @@
             height: 100%;
             background: var(--bg-input-color);
             color: var(--text-color);
-            font-size: var(--font-size-p-small);
+            font-size: var(--font-size-p);
             font-weight: var(--font-weight-medium);
             border: none;
             resize: none;

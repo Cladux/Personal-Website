@@ -2,7 +2,7 @@ import { useRef, FormEvent } from "react";
 import styles from "./Contact.module.scss";
 import ContactTitle from "./components/contactTitle/ContactTitle";
 import Icons from "../../icons";
-import emailjs from "emailjs-com";
+import emailjs from "@emailjs/browser";
 
 const Contact = (): JSX.Element => {
   const Icon = Icons["mailOpen"];

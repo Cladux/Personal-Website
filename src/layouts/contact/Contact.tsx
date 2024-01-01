@@ -1,71 +1,50 @@
-import { useRef, FormEvent, useState } from "react";
+import { useRef, FormEvent } from "react";
 import styles from "./Contact.module.scss";
 import ContactTitle from "./components/contactTitle/ContactTitle";
 import Icons from "../../icons";
 import emailjs from "emailjs-com";
 
 const Contact = (): JSX.Element => {
-  const [name, setName] = useState<string>("");
-  const [email, setEmail] = useState<string>("");
-  const [subject, setSubject] = useState<string>("");
-  const [message, setMessage] = useState<string>("");
-  const templateParams = {
-    name: "Soroush",
-    notes: "Check this out!",
-  };
+  const Icon = Icons["mailOpen"];
 
-  // auto copy email wen click
+  // auto copy email wen clicked
   const emailRef = useRef<HTMLAnchorElement>(null);
   const copyText = () => {
     const text = emailRef.current?.innerText;
     if (text) {
       navigator.clipboard
         .writeText(text)
-        .then(() => alert(`Email copied: ${text}`))
-        .catch((err) => alert(`Could not copy text: ${err}`));
+        .then(() => alert(`Email copied: ${text}`));
     }
   };
 
-  //submit form handle
-  const handleSubmit = (event: FormEvent) => {
+  //send Email handle
+  const form = useRef<HTMLFormElement>(null);
+  const sendEmail = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
-    //emailjs 
-    emailjs
-      .send(
-        "service_cxxzf95",
-        "template_m21jpdj",
-        templateParams,
-        "20wX-LPdJwHrijlCJ"
-      )
-      .then(
-        (response) => {
-          console.log("SUCCESS!", response.status, response.text);
-        },
-        (err) => {
-          console.log("FAILED...", err);
-        }
-      );
-    // Check if any field is empty
-    if (!name || !email || !subject || !message) {
-      // Show Please fill out pop-up
-      alert("Please fill out all fields.");
-      return;
+    if (form.current) {
+      emailjs
+        .sendForm(
+          "service_cxxzf95",
+          "template_m21jpdj",
+          form.current,
+          "20wX-LPdJwHrijlCJ"
+        )
+        .then(
+          (result) => {
+            console.log(result.text);
+            alert("massage send!");
+          },
+          (error) => {
+            console.log(error.text);
+          }
+        );
+    } else {
+      alert("Please fill the form first");
     }
-
-    // handle form submission here
-    console.log({ name, email, subject, message });
-
-    // Reset form fields
-    setName("");
-    setEmail("");
-    setSubject("");
-    setMessage("");
-
-    // Show submitted pop-up
-    alert("Form submitted successfully!");
   };
-  const Icon = Icons["mailOpen"];
+
   return (
     <>
       <section id="Contact" className={styles.contact}>
@@ -98,14 +77,15 @@ const Contact = (): JSX.Element => {
             </div>
           </div>
           <div className={styles.rightSection}>
-            <form onSubmit={handleSubmit}>
+            <form ref={form} onSubmit={sendEmail}>
               <div className={styles.inputName}>
                 <label htmlFor="your-name">Your name</label>
                 <input
                   type="text"
                   id="your-name"
-                  value={name}
-                  onChange={(e) => setName(e.target.value)}
+                  name="user_name"
+                  minLength={3}
+                  maxLength={20}
                 />
               </div>
               <div className={styles.inputEmail}>
@@ -113,25 +93,22 @@ const Contact = (): JSX.Element => {
                 <input
                   type="email"
                   id="your-email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
+                  name="user_email"
+                  minLength={6}
+                  maxLength={30}
                 />
               </div>
               <div className={styles.inputSubject}>
                 <label htmlFor="subject">Subject</label>
-                <input
-                  type="text"
-                  id="subject"
-                  value={subject}
-                  onChange={(e) => setSubject(e.target.value)}
-                />
+                <input type="text" minLength={6} maxLength={50} />
               </div>
               <div className={styles.inputMessage}>
                 <label htmlFor="message">Massage *</label>
                 <textarea
                   id="message"
-                  value={message}
-                  onChange={(e) => setMessage(e.target.value)}
+                  name="message"
+                  minLength={10}
+                  maxLength={3000}
                 ></textarea>
               </div>
               <div className={styles.inputSubmit}>

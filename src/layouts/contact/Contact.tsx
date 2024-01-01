@@ -24,24 +24,36 @@ const Contact = (): JSX.Element => {
     event.preventDefault();
 
     if (form.current) {
-      emailjs
-        .sendForm(
-          "service_cxxzf95",
-          "template_m21jpdj",
-          form.current,
-          "20wX-LPdJwHrijlCJ"
-        )
-        .then(
-          (result) => {
-            console.log(result.text);
-            alert("massage send!");
-          },
-          (error) => {
-            console.log(error.text);
-          }
-        );
-    } else {
-      alert("Please fill the form first");
+      // Get form data
+      const formData = new FormData(form.current);
+      const userName = formData.get("user_name");
+      const userEmail = formData.get("user_email");
+      const message = formData.get("message");
+      // Check if fields are not empty
+      if (userName && userEmail && message) {
+        emailjs
+          .sendForm(
+            "service_cxxzf95",
+            "template_m21jpdj",
+            form.current,
+            "20wX-LPdJwHrijlCJ"
+          )
+          .then(
+            (result) => {
+              console.log(result.text);
+              alert("massage send!");
+              // Reset form fields after successful email send
+              if (form.current !== null) {
+                form.current.reset();
+              }
+            },
+            (error) => {
+              console.log(error.text);
+            }
+          );
+      } else {
+        alert("Please fill all the fields before sending.");
+      }
     }
   };
 
@@ -107,8 +119,8 @@ const Contact = (): JSX.Element => {
                 <textarea
                   id="message"
                   name="message"
-                  minLength={10}
-                  maxLength={3000}
+                  minLength={5}
+                  maxLength={4000}
                 ></textarea>
               </div>
               <div className={styles.inputSubmit}>

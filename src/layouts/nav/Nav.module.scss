@@ -75,5 +75,12 @@ nav {
     .navList {
       gap: 30px;
     }
+    .navCircles {
+      & > li {
+        $size: 10px;
+        width: $size;
+        height: $size;
+      }
+    }
   }
 }

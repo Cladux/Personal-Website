@@ -55,7 +55,7 @@
   }
   .sectionTow {
     height: auto;
-    padding: 84px 0;
+    padding: 80px 0;
     width: 100%;
     background: var(--bg-color-light);
     .container {
@@ -66,14 +66,17 @@
       h3 {
         font-size: var(--font-size-header-3);
         font-weight: var(--font-weight-bold);
-        margin-bottom: 30px;
+        margin-bottom: 50px;
       }
       .serviceSection {
         display: grid;
-        grid-template: 1fr 1fr / 2fr 1fr;
+        grid-template: 1fr 1fr / 1fr 1fr;
+        justify-items: center;
         flex-wrap: wrap;
-        height: 350px;
+        height: 320px;
         margin: auto;
+        margin-left: 100px;
+        text-align: center;
       }
     }
   }
@@ -127,10 +130,12 @@
         }
         .serviceSection {
           max-width: 60%;
+          height: 420px;
           grid-template: repeat(4, 1fr) / 1fr;
           row-gap: 80px;
           padding-top: 40px;
           justify-items: center;
+          align-items: center;
           margin-bottom: 200px;
         }
       }
@@ -152,7 +157,7 @@
     .sectionTow {
       .container {
         .serviceSection {
-          margin-left: 20px;
+          margin-left: 40px;
         }
       }
     }

@@ -8,7 +8,7 @@
   background: var(--bg-color-text);
   overflow: hidden;
   .thumbnail {
-    height: 60%;
+    height: 55%;
     width: 100%;
     background: var(--bg-color-light);
     img {
@@ -19,7 +19,7 @@
     }
   }
   .info {
-    height: 40%;
+    height: 45%;
     @include flex(column, space-between, flex-start);
     flex-basis: 100%;
     padding: 25px;
@@ -40,26 +40,16 @@
       }
     }
     .links {
-      @include flex(row, space-between);
+      @include flex();
       font-size: var(--font-size-p-small);
       font-weight: var(--font-weight-semi-bold);
       width: 100%;
-      .viewCode {
-        @include flex(row, flex-start);
-        gap: 2px;
-        width: 80px;
-        a {
-          font-size: var(--font-size-p-small);
-        }
-        svg {
-          fill: var(--text-color);
-        }
-      }
       .livePreview {
         @include flex;
-        width: 170px;
-        height: 42px;
+        width: 150px;
+        height: 40px;
         border-radius: 10px;
+        margin-top: 10px;
         background: var(--primary-color);
         color: var(--bg-color);
       }

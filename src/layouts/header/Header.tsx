@@ -24,11 +24,11 @@ const Header = (): JSX.Element => {
                   title="Download CV"
                   bgTransparent={true}
                 />
-                <Button
+                {/* <Button
                   setIcon="circleDown"
                   title="Portfolio"
                   bgTransparent={false}
-                />
+                /> */}
               </div>
               <div className={styles.socialBoxes}>
                 <SocialLink

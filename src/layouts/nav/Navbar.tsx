@@ -19,7 +19,7 @@ const Navbar = (): JSX.Element => {
   const menuItems: string[] = ["Home", "About Me", "Projects", "Contact"];
 
   //set page Y offset every layouts here
-  const PAGE_POSITIONS: number[] = useMemo(() => [0, 900, 3500, 5000], []);
+  const PAGE_POSITIONS: number[] = useMemo(() => [0, 900, 3200, 4300], []);
 
   // listening pageYoffset
   useEffect(() => {

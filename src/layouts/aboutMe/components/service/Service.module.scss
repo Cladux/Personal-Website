@@ -1,7 +1,7 @@
 @import "../../../../scssModules/mixin.scss";
 .serviceBox {
   @include flex(row, flex-start);
-  width: 300px;
+  width: 320px;
   height: 80px;
   gap: 15px;
   flex-basis: 50%;
@@ -9,7 +9,7 @@
     fill: var(--primary-color);
   }
   p {
-    font-size: var(--font-size-p);
+    font-size: var(--font-size-p-medium);
     font-weight: var(--font-weight-semi-bold);
   }
 }

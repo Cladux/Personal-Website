@@ -44,7 +44,7 @@ const Projects = (): JSX.Element => {
   }, [width]);
   // slide the slider when btn clicked
   const sliderBtnHandler = (index: number) => {
-    setWidthPosition(UNIT * index + 95 * index);
+    setWidthPosition(UNIT * index + 20 * index);
   };
   // set active class for slider btn
   const activeClassHandle = (index: number) => {
@@ -69,7 +69,6 @@ const Projects = (): JSX.Element => {
                   repoName={repo.name}
                   imgAlt={repo.owner.type}
                   title={repo.name}
-                  link={repo.svn_url}
                   livePreview={repo.svn_url}
                 />
               ))}

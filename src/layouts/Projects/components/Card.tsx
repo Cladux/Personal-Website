@@ -5,7 +5,6 @@ type Props = {
   repoName: string;
   imgAlt: string;
   title: string;
-  link: string;
   livePreview: string;
 };
 
@@ -14,11 +13,9 @@ const Card = ({
   repoName,
   imgAlt,
   title,
-  link,
   livePreview,
 }: Props): JSX.Element => {
   const IconUi = Icons["bxLayout"];
-  const IconRight = Icons["arrowRight"];
   return (
     <>
       <div className={styles.card}>
@@ -37,10 +34,6 @@ const Card = ({
             Front-end Development
           </p>
           <div className={styles.links}>
-            <a className={styles.viewCode} href={link} target="_blank">
-              view code
-              <IconRight />
-            </a>
             <a
               className={styles.livePreview}
               href={livePreview}
